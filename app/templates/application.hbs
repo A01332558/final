@@ -1,5 +1,12 @@
-{{!-- The following component displays Ember's default welcome message. --}}
-{{welcome-page}}
-{{!-- Feel free to remove this! --}}
-
-{{outlet}}
+<div class="ui container">	
+	<div class="card-panel red lighten-2">
+		<center>
+			<h1 class="ui huge header">Facturas</h1>
+		</center>
+		<br><br>
+		<center>
+			<button class="ui inverted black basic button" {{action 'goTo'}}>Crear Factura</button>
+		</center>
+		{{outlet}}
+	</div>
+</div>

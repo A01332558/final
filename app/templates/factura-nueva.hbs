@@ -1,0 +1,55 @@
+<div class="ui container">	
+	<div class="card-panel ">
+		<center>
+			<div class="row">
+    			<form class="col s12">
+      				<div class="row">
+        				<div class="input-field col s4">
+        					{{input type="text" value=model.serie class="validate"}}
+        					<label class="active">Serie:</label>
+						</div>
+						<div class="input-field col s4">
+							{{input type="text" value=model.folio}}
+							<label class="active">Folio:</label>
+						</div>
+						<div class="input-field col s4">
+							{{input type="date" value=model.fecha}}
+							<label class="active">Fecha</label>
+						</div>
+						<div class="input-field col s4">
+						</div>
+						<div class="input-field col s4">
+							{{input type="text" value=model.formaPago}}
+							<label class="active">Forma de Pago:</label>
+						</div>
+						<div class="input-field col s4">
+						</div>
+					</div>
+					<div class="row">
+						<center>
+							{{#each model.conceptos as |concepto|}}
+				  					{{concepto-info concepto=concepto}}
+							{{/each}}
+						</center>
+					</div>
+					
+					<button {{action 'nuevoConcepto'}} class="ui orange button">Añadir concepto</button>
+					<br><br>
+
+					<br><br>
+					<div class="row">
+						<div class="col s10">
+						</div>
+						<div class="col s2">
+							Subtotal: ${{model.subtotal}}<br>
+							Total: ${{model.total}}
+						</div>
+					</div>
+
+					<button {{action 'guardar'}} class="ui green button">Guardar</button>
+					<button {{action 'goTo'}} class="ui orange button">Facturas</button>
+				</form>
+			</div>
+		</center>
+	</div>
+</div>

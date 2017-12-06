@@ -1,0 +1,29 @@
+<center>
+	<div class="row">
+	    <form class="col s12">
+	    	<div class="row">
+	    		<div class="input-field col s1"></div>
+	    		<div class="input-field col s2">
+	    			{{input type="text" value=concepto.cantidad class="validate"}}
+	    			<label class="active">Cantidad: </label>
+	    		</div>
+	    		<div class="input-field col s2">
+	    			descripcion: {{textarea type="text" value=concepto.descripcion}}
+	    		</div>
+	    		<div class="input-field col s2">
+	    			{{input type="text" value=concepto.precio class="validate"}}
+	    			<label class="active">Precio:</label>
+	    		</div>
+	    		<div class="col s2">
+	    			<label>Importe</label><br><br>
+	    			{{concepto.importe}} 
+	    		</div>
+	    		<div class="input-field col s2">
+	    			{{input type="text" value=concepto.descuento class="validate"}}
+	    			<label class="active">Descuento</label>
+	    		</div>
+	    		<div class="input-field col s1"></div>
+	    	</div>
+	    </form>
+	</div>
+</center>
